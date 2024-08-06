@@ -31,5 +31,13 @@ public class NewTest {
       new Object[] { 2, "b" },
     };
   }
+  @BeforeClass
+  public void beforeClass() {
+  }
+  
+  @AfterClass
+  public void afterClass() {
+  }
+  
 
 }
