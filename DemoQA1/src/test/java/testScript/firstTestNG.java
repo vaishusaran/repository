@@ -58,7 +58,10 @@ public class firstTestNG {
 	@Test(dataProvider = "dp")
 	public void UserLogin(String sUsername, String sPassword)throws Exception {
 		extentTest = extentReports.createTest("Test Case 1", "This test case has passed");
-		CommonFunction.Login(sUsername, sPassword);
+		CommonFunction.modalClose();
+	//	CommonFunction.Login(sUsername, sPassword);
+	//	CommonFunction.productNavigation();
+		CommonFunction.productSearch();
 		String methodName = new Exception().getStackTrace()[0].getMethodName();
 		 extentTest = extentReports.createTest(methodName,"single_input_test");
 	       extentTest.log(Status.PASS,"Starting test to verify single input");
@@ -67,7 +70,7 @@ public class firstTestNG {
 
 	@AfterMethod
 	public void afterMethod() {
-		CommonFunction.CloseBrowser();
+		//CommonFunction.CloseBrowser();
 		 extentReports.flush();
 	}
 
